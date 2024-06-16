@@ -5,11 +5,12 @@ import { NgForOf, NgIf } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { ApiService } from '../../api.service';
 import { Category } from '../../models';
+import {BackLinkComponent} from "../../back-link/back-link.component";
 
 @Component({
   selector: 'app-categories',
   standalone: true,
-  imports: [RouterLink, NgIcon, NgForOf, NgIf, FormsModule],
+  imports: [RouterLink, NgIcon, NgForOf, NgIf, FormsModule, BackLinkComponent],
   templateUrl: './categories.component.html',
   styleUrl: './categories.component.css',
 })
