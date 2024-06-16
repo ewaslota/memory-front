@@ -24,9 +24,9 @@
 
   <div class="flex flex-col gap-2">
     <ng-container *ngIf="categories.length; else noCategories">
-      <div class="flex items-center gap-4" *ngFor="let c of categories">
+      <div class="flex items-center gap-4" *ngFor="let c of categories; let i = index">
         <div class="white-list-item">{{ c }}</div>
-        <button>
+        <button (click)="removeCategory(i)">
           <ng-icon name="heroNoSymbol"></ng-icon>
         </button>
       </div>

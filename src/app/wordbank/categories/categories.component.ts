@@ -21,4 +21,8 @@ export class CategoriesComponent {
     this.newCategory = '';
     this.showNewCategory = false;
   }
+
+  removeCategory(i: number) {
+    this.categories.splice(i, 1);
+  }
 }
