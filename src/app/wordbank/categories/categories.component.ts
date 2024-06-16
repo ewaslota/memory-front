@@ -5,7 +5,7 @@ import { NgForOf, NgIf } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { ApiService } from '../../api.service';
 import { Category } from '../../models';
-import {BackLinkComponent} from "../../back-link/back-link.component";
+import { BackLinkComponent } from '../../back-link/back-link.component';
 
 @Component({
   selector: 'app-categories',
@@ -18,6 +18,7 @@ export class CategoriesComponent implements OnInit {
   ngOnInit(): void {
     this.fetchCategories();
   }
+
   private readonly apiService = inject(ApiService);
 
   categoriesList: Category[] = [];
@@ -27,7 +28,6 @@ export class CategoriesComponent implements OnInit {
   addCategory() {
     this.apiService
       .addCategory(this.newCategory)
-      // .subscribe(category => this.fetchCategories());
       .subscribe((category) => this.categoriesList.push(category));
     this.newCategory = '';
     this.showNewCategory = false;

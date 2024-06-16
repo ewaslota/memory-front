@@ -1,0 +1,23 @@
+<div class="flex flex-col gap-4">
+  <app-back-link path="../../"></app-back-link>
+
+  <div class="flex flex-col gap-2">
+    <ng-container *ngIf="cardsList.length; else noCards">
+      <div class="flex items-center gap-4" *ngFor="let c of cardsList">
+        <div class="white-list-item divide-y">
+          <div class="p-2">{{ c.term }}</div>
+          <div class="p-2">{{ c.definition }}</div>
+        </div>
+        <button>
+          <ng-icon name="heroNoSymbol"></ng-icon>
+        </button>
+      </div>
+    </ng-container>
+
+    <ng-template #noCards>
+      <div class="text-center">
+        Nie posiadasz żadnych fiszek z tej kategorii
+      </div>
+    </ng-template>
+  </div>
+</div>
