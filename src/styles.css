@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  @apply bg-stone-200;
+}
+
 .rotate-y-180 {
   @apply [transform:rotateY(180deg)];
 }
