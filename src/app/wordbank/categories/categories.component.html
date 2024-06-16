@@ -4,6 +4,24 @@
     Powrót
   </a>
 
+  <div class="flex justify-between">
+    <div class="font-bold">Kategorie</div>
+    <button>
+      <ng-icon name="heroPlusCircle"></ng-icon>
+      <span>Dodaj</span>
+    </button>
+  </div>
+
+  <div class="flex flex-col">
+    <label class="text-sm">Nazwa</label>
+    <div class="flex items-center gap-4">
+      <input type="text">
+      <button>
+        <ng-icon name="heroCheckCircle"></ng-icon>
+      </button>
+    </div>
+  </div>
+
   <div class="flex flex-col gap-2">
     <ng-container *ngIf="categories.length; else noCategories">
       <div class="flex items-center gap-4" *ngFor="let c of categories">
