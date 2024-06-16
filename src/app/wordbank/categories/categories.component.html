@@ -6,17 +6,17 @@
 
   <div class="flex justify-between">
     <div class="font-bold">Kategorie</div>
-    <button>
+    <button (click)="showNewCategory = true">
       <ng-icon name="heroPlusCircle"></ng-icon>
       <span>Dodaj</span>
     </button>
   </div>
 
-  <div class="flex flex-col">
+  <div class="flex flex-col" *ngIf="showNewCategory">
     <label class="text-sm">Nazwa</label>
     <div class="flex items-center gap-4">
-      <input type="text">
-      <button>
+      <input type="text" [(ngModel)]="newCategory" />
+      <button (click)="addCategory()">
         <ng-icon name="heroCheckCircle"></ng-icon>
       </button>
     </div>
