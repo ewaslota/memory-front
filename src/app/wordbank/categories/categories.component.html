@@ -1,0 +1,21 @@
+<div class="flex flex-col gap-4">
+  <a class="flex items-center gap-2" routerLink="../">
+    <ng-icon name="heroArrowLeft"></ng-icon>
+    Powrót
+  </a>
+
+  <div class="flex flex-col gap-2">
+    <ng-container *ngIf="categories.length; else noCategories">
+      <div class="flex items-center gap-4" *ngFor="let c of categories">
+        <div class="white-list-item">{{ c }}</div>
+        <button>
+          <ng-icon name="heroNoSymbol"></ng-icon>
+        </button>
+      </div>
+    </ng-container>
+
+    <ng-template #noCategories>
+      <div class="text-center">Nie posiadasz żadnej kategorii</div>
+    </ng-template>
+  </div>
+</div>
